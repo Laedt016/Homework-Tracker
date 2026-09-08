@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-
 import 'home_screen.dart';
 
 void main() {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Homework Tracker',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.green),
       home: const SplashScreen(),
     );
   }
@@ -31,7 +30,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initStaate() {
+  void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.of(
@@ -43,12 +42,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         body: Center(
           child: Text('Homework Tracker',
           style: TextStyle(
             fontSize: 28,
-            color: Colors.white,
+            color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
