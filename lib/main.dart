@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Homework Tracker',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.green),
       home: const SplashScreen(),
     );
   }
@@ -45,12 +45,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         body: Center(
           child: Text('Homework Tracker',
           style: TextStyle(
             fontSize: 28,
-            color: Colors.white,
+            color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
