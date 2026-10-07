@@ -6,11 +6,19 @@ class AssignmentPresenter {
 
     List<Assignment> get assignments => _assignments;
 
-    void addAssignment(String title) {
-        _assignments.add(Assignment(title: title));
+    Future<void> loadAssignment() async {
+      final fetched = await Assignment.fetchAssignments();
+      _assignments.clear();
+      _assignments.addAll(fetched);
     }
 
-    void toggleCompleted(int index) {
-        _assignments[index].isCompleted = !_assignments[index].isCompleted;
+    Future<void> addAssignment(String title, String courseName) async {
+      await Assignment.addAssignment(title, courseName);
+      _assignments.add(Assignment(title: title, courseName: courseName));
+    }
+
+    Future<void> toggleCompleted(int index) async {
+      await Assignment.updateCompletionStatus(index, _assignments);
+      _assignments[index].isCompleted = !_assignments[index].isCompleted;
     }
 }

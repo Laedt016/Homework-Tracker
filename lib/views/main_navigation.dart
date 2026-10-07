@@ -18,6 +18,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     const HomeScreen(),
     const AssignmentListScreen(),
     const CourseListScreen(),
+    ProfileScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -35,6 +36,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        
         items: const[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
